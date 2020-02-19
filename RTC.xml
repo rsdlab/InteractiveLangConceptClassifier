@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rtc:RtcProfile rtc:version="0.2" rtc:id="RTC:hiroyasu:Category:InteractiveLangConceptClassifier:1.0.0" xmlns:rtc="http://www.openrtp.org/namespaces/rtc" xmlns:rtcExt="http://www.openrtp.org/namespaces/rtc_ext" xmlns:rtcDoc="http://www.openrtp.org/namespaces/rtc_doc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rtc:BasicInfo xsi:type="rtcExt:basic_info_ext" rtcExt:saveProject="InteractiveLangConceptClassifier" rtc:updateDate="2019-06-24T03:08:14Z" rtc:creationDate="2019-06-24T03:08:14Z" rtc:version="1.0.0" rtc:vendor="hiroyasu" rtc:maxInstances="1" rtc:executionType="PeriodicExecutionContext" rtc:executionRate="1000.0" rtc:description="InteractiveLangConceptClassifier" rtc:category="Category" rtc:componentKind="DataFlowComponent" rtc:activityType="PERIODIC" rtc:componentType="STATIC" rtc:name="InteractiveLangConceptClassifier">
+        <rtcExt:VersionUpLogs></rtcExt:VersionUpLogs>
+        <rtcExt:VersionUpLogs></rtcExt:VersionUpLogs>
+    </rtc:BasicInfo>
+    <rtc:Actions>
+        <rtc:OnInitialize xsi:type="rtcDoc:action_status_doc" rtc:implemented="true"/>
+        <rtc:OnFinalize xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnStartup xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnShutdown xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnActivated xsi:type="rtcDoc:action_status_doc" rtc:implemented="true"/>
+        <rtc:OnDeactivated xsi:type="rtcDoc:action_status_doc" rtc:implemented="true"/>
+        <rtc:OnAborting xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnError xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnReset xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnExecute xsi:type="rtcDoc:action_status_doc" rtc:implemented="true"/>
+        <rtc:OnStateUpdate xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnRateChanged xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnAction xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnModeChanged xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+    </rtc:Actions>
+    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="stringdata" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="/usr/include/openrtm-1.2/rtm/idl/BasicDataType.idl" rtc:type="RTC::TimedString" rtc:name="stringout" rtc:portType="DataOutPort"/>
+    <rtc:ServicePorts xsi:type="rtcExt:serviceport_ext" rtcExt:position="LEFT" rtc:name="speechmanage">
+        <rtc:ServiceInterface xsi:type="rtcExt:serviceinterface_ext" rtcExt:variableName="SpeechManageProvider" rtc:path="/home/rsdlab/workspace/TextConceptClassifier/idl" rtc:type="Manage::SpeechManage" rtc:idlFile="/home/rsdlab/workspace/InteractiveLangConceptClassifier/idl/SpeechManage.idl" rtc:instanceName="SpeechManageProvider" rtc:direction="Provided" rtc:name="SpeechManage"/>
+    </rtc:ServicePorts>
+    <rtc:ServicePorts xsi:type="rtcExt:serviceport_ext" rtcExt:position="RIGHT" rtc:name="actionmanage">
+        <rtc:ServiceInterface xsi:type="rtcExt:serviceinterface_ext" rtcExt:variableName="ActionManageRequire" rtc:path="/home/rsdlab/workspace/idl" rtc:type="Action::ActionManage" rtc:idlFile="/home/rsdlab/workspace/idl/ActionManage.idl" rtc:instanceName="ActionManageRequire" rtc:direction="Required" rtc:name="ActionManage"/>
+    </rtc:ServicePorts>
+    <rtc:ServicePorts xsi:type="rtcExt:serviceport_ext" rtcExt:position="LEFT" rtc:name="interactivemanage">
+        <rtc:ServiceInterface xsi:type="rtcExt:serviceinterface_ext" rtcExt:variableName="InteractiveManageProvider" rtc:path="/home/rsdlab/workspace/InteractiveConceptClassifier/idl" rtc:type="Manage::InteractiveManage" rtc:idlFile="/home/rsdlab/workspace/InteractiveLangConceptClassifier/idl/InteractiveManage.idl" rtc:instanceName="InteractiveManageProvider" rtc:direction="Provided" rtc:name="InteractiveManage"/>
+    </rtc:ServicePorts>
+    <rtc:ServicePorts xsi:type="rtcExt:serviceport_ext" rtcExt:position="RIGHT" rtc:name="Liftermanage">
+        <rtc:ServiceInterface xsi:type="rtcExt:serviceinterface_ext" rtcExt:variableName="lifterRequired" rtc:path="/home/rsdlab/workspace/SeedNoid_MobileRTC/idl" rtc:type="RTC::LifterPoseInterface" rtc:idlFile="/home/rsdlab/workspace/SeedNoid_MobileRTC/idl/SeedNoid_Mobile.idl" rtc:instanceName="lifterRequired" rtc:direction="Required" rtc:name="lifter"/>
+    </rtc:ServicePorts>
+    <rtc:Language xsi:type="rtcExt:language_ext" rtc:kind="Python"/>
+</rtc:RtcProfile>

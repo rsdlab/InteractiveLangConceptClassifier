@@ -1,0 +1,11 @@
+/**
+ * Filename = SpeechManage.idl
+ * 
+ **/
+module Action {
+
+	interface SpeechAction {
+	  void read (in string systemid, in string speechid);
+	};
+
+};
